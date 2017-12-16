@@ -13,7 +13,7 @@ int main() {
         cout<<"("<<Ai.getX()<<", "<<Ai.getY()<<", "<<Ai.getZ()<<")"<<endl;
     }
     double k=0;
-    for(int i=0; i<=49; i++){
+    for(int i=0; i<50; i++){
         if (coord[i].getRast()<coord[k].getRast())
             k=i;
     }
@@ -33,7 +33,7 @@ int main() {
         k=0;
         for (int j=0; j<50; j++){
             if (Point::getRast2(coord[j],A[i])<Point::getRast2(coord[k],A[i]))
-                k=i;
+                k=j;
         }
         cout<<"Minimal'naya k "<<"("<<A[i].getX()<<", "<<A[i].getY()<<", "<<A[i].getZ()<<")  "<<"("<<coord[k].getX()<<", "<<coord[k].getY()<<", "<<coord[k].getZ()<<")"<<endl;
     }
